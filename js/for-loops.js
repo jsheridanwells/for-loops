@@ -34,10 +34,22 @@ function decrementByDivision(start, divisor) {
 
 
 //Array iteration
-
+function outputPresidents(arr) {
+	content = '';
+	for (var i = 1; i < arr.length; i++) {
+		content += 'President #' + i + ' was ' + arr[i] + '<br>';
+	}
+	arrItOutput.innerHTML = content;
+}
 
 //Object iteration
-
+function outputAnts(obj) {
+	content = ''; 
+	for (x in obj) {
+		content += x + '<br>';
+	}
+	objItOutput.innerHTML = content;
+}
 //bind functions to buttons and add arguments
 byTenButton.onclick = function() {
 	incrementByTen(5, 250);
@@ -46,3 +58,12 @@ byTenButton.onclick = function() {
 byDivButton.onclick = function() {
 	decrementByDivision(4096, 2);
 }
+
+arrItButton.onclick = function() {
+	outputPresidents(presidents);
+}
+
+objItButton.onclick = function() {
+	outputAnts(antSpecies);
+}
+
